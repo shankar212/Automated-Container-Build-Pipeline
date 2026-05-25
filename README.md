@@ -88,7 +88,15 @@ The image will be pushed as:
 DOCKERHUB_USERNAME/automated-container-build-pipeline:latest
 DOCKERHUB_USERNAME/automated-container-build-pipeline:sha-<commit-sha>
 ```
+## Deliverables
 
+- GitHub Repository: https://github.com/shankar212/Automated-Container-Build-Pipeline
+- Successful GitHub Actions Run: https://github.com/shankar212/Automated-Container-Build-Pipeline/actions.
+- Docker Hub Image: https://hub.docker.com/r/shankerathod/automated-container-build-pipeline
+
+## Screenshots
+
+Screenshots are available in the `screenshots/` folder.
 ## Assignment Deliverables
 
 Submit:
