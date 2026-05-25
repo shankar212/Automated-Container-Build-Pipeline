@@ -1,0 +1,27 @@
+{
+  "name": "automated-container-build-pipeline",
+  "version": "1.0.0",
+  "description": "Assignment 1: Hello World web app containerized with Docker and built through GitHub Actions.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "docker",
+    "github-actions",
+    "nodejs",
+    "devops"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
