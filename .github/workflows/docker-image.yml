@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: automated-container-build-pipeline
+  IMAGE_NAME: shankerathod/automated-container-build-pipeline
 
 jobs:
   build-and-push:
@@ -24,22 +24,14 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: shankerathod
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Extract Docker metadata
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=raw,value=latest
-            type=sha,prefix=sha-
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: |
+            shankerathod/automated-container-build-pipeline:latest
+            shankerathod/automated-container-build-pipeline:sha-${{ github.sha }}
