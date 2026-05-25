@@ -79,7 +79,7 @@ Before pushing to GitHub, add these repository secrets in GitHub:
 
 | Secret name | Value |
 | --- | --- |
-| `DOCKERHUB_USERNAME` | Your Docker Hub username |
+| `DOCKERHUB_USERNAME` |  Docker Hub username |
 | `DOCKERHUB_TOKEN` | Docker Hub access token |
 
 The image will be pushed as:
